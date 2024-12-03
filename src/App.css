@@ -1,42 +1,200 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+:root {
+  --font-inter-sans: 'Inter', sans-serif;
+  --white-color: #fff;
+  --black-color: #000;
+  --title-color: #100c08;
+  --text-color: #787878;
+  --primary-color1: #655CFE;
+  --primary-color2: #FF83D5;
+}
+html {
+  font-size: 100%;
+  scroll-behavior: smooth;
+  font-family: var(--font-inter-sans);
+  font-weight: 400;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: var(--font-inter-sans);
+  font-weight: 700;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width:576px) {
+  .container {
+    max-width: 540px
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (min-width:768px) {
+  .container {
+    max-width: 720px
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+@media (min-width:992px) {
+  .container {
+    max-width: 960px
   }
 }
 
-.card {
-  padding: 2em;
+@media (min-width:1200px) {
+  .container {
+    max-width: 1240px
+  }
+}
+img{
+  width: 100%;
+}
+.primary-btn{
+  background-color: var(--primary-color1);
+  color: var(--white-color);
+  padding: 15px 30px;
+  border-radius: 100px;
+}
+/* Start Home Page */
+
+.reward-card{
+  width: 130px;
+  position: absolute;
+  left: 6%;
+  top: 36%;
+  font-size: 20px;
+  background-color: #FF83D5;
+  padding: 10px;
+  border-radius: 16px;
+  color: #fff;
+  line-height: 24px;
+  font-weight: 300;
+}
+.star-shape{
+  background-color: #fff;
+  padding: 6px 8px;
+  width: fit-content;
+  border-radius: 40px;
+}
+.star-shape img{
+  width: 18px;
+}
+.email-input{
+  background-color: #F5F5F5;
+  padding: 15px 30px;
+  color: #e38f8f;
+  border-radius: 100px;
+  font-size: 16px;
+}
+.email-input:focus{
+  /* outline: #655CFE;
+  border: 1px solid #655CFE; */
+}
+.chart-img{
+  width: 430px;
+}
+.revenue-card{
+  position: absolute;
+  left: 15%;
+  bottom: -5%;
+  background-color: #655CFE;
+  padding: 8px 20px;
+  border-radius: 16px;
+  color: #fff;
+  font-weight: 300;
+}
+.shape-1{
+  background-color:#4D43F5;
+  padding: 10px 15px;
+  display: grid;
+  place-content: center;
+  margin-right: 10px;
+  border-radius: 100px;
+}
+.shape-1 img{
+  width: 25px;
+}
+.testimonial-slider .slick-dots li button{
+
+ border-radius: 100px;
+ display: grid;
+ place-content: center;
+}
+.testimonial-slider .slick-dots .slick-active button{
+  border: 1px solid #655CFE; 
+}
+.testimonial-slider .slick-dots .slick-active button:before{
+  color: #655CFE;
+}
+.testimonial-slider .slick-dots li button:before{
+font-size: 14px;
+line-height: 20px;
+width: 22px;
+top: 1px;
+left: -1px;
+}
+.testimonial-slider .slick-next:before{
+  content: '';
+  background: #655CFE;
+  background-image: url('./assets/images/arrow-right-solid.svg');
+  font-size: 25px;
+  padding: 0px;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100px;
+  padding: 2px;
+}
+.testimonial-slider .slick-next{
+  right: 120px;
+
+}
+.testimonial-slider .slick-prev{
+  display: none !important;
 }
 
-.read-the-docs {
-  color: #888;
+@media(max-width:756px){
+  .email-input{
+    padding: 11px 14px;
+    width: 220px;
+  }
+  .primary-btn{
+    padding: 7px 15px;
+  }
+  .reward-card{
+    position: relative;
+    left: 0px;
+    margin-top: 11px;
+  }
+  .revenue-card{
+    position: relative;
+    left: 0;
+    bottom: 0;
+  }
+  .main-shape{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+  }
 }
+@media(max-width:991px){
+  .reward-card {
+    left: 0%;
+    top: 7%;
+  }
+  .revenue-card{
+    left: 0%;
+    bottom: 0%;
+  }
+}
+/*end Home page */
