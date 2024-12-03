@@ -8,7 +8,7 @@ export default function Mainbanner() {
 
   return (
     <>
-      <div className="container grid lg:grid-cols-2 grid-cols-1 lg:pb-16 pb-0">
+      <div className="container grid lg:grid-cols-2 grid-cols-1 lg:pb-16 pb-0 lg:mt-14 mt-7">
         <div>
           <h1 className=' md:text-6xl text-4xl  md:mb-6 mb-4 md:leading-tight'>Grow Your Business with Our Plateform</h1>
           <p className='text-md leading-7'>"Our finance department has experienced significant growth through strategic
@@ -34,9 +34,9 @@ export default function Mainbanner() {
                 <p>Total Revenue</p>
                 <p className='text-slate-300'>+28.35</p>
               </div>
-              <h3 className='lg:text-5xl text-3xl py-2'>
+              <p className='lg:text-5xl text-3xl py-2'>
                 $400.933
-              </h3>
+              </p>
             </div>
           </div>
         </div>
