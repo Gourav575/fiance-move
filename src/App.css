@@ -169,16 +169,20 @@ a:hover{
 
   .nav-elements {
     position: absolute;
-    right: 0;
+    right: -270px;
     top: 80px;
     background-color: #efeeff;
     width: 0px;
     transition: all 0.3s ease-in;
     overflow: hidden;
+    transition: .7s;
+
   }
 
   .nav-elements.active {
+    right: 0px;
     width: 100%;
+    transition: .7s;
   }
 
   .nav-elements ul {
