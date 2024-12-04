@@ -1,160 +1,123 @@
-import React, { useState } from "react";
-import logo from "../assets/images/logo.svg";
-import { Link } from "react-router-dom";
-// import faArrowRightFromBracket from '@fortawesome/react-fontawesome'
+import React from 'react';
+import flogo from '../assets/images/footer-logo.svg'
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-  const handleSubmit = (event) => {
-    event.preventDefault();
-  };
-
   return (
-    <footer className="text-white bg-black body-font">
-      <div className="grid w-11/12 grid-cols-2 pb-6 mx-auto md:px-5 pt-14 lg:grid-cols-5 ">
-        <div className="flex-shrink-0 col-span-2 mx-auto mb-8 text-center lg:mx-0 md:text-left">
-          <a className="flex items-center justify-center mb-4 font-medium text-gray-900 title-font md:justify-start md:mb-10">
-            <img src={logo} alt="" />
-          </a>
-          <p className="md:mt-2 md:mb-10 md-4 text-md ">
-            Start working with BTHAWK that can provide everything you need to
-            increase your business revenue.
-          </p>
-          <span className="inline-flex justify-center mt-4 sm:ml-auto sm:mt-0">
-            <a className="px-4 text-center border-r-2">
-              <svg
-                fill="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                className="w-5 h-5"
-                viewBox="0 0 24 24"
-              >
-                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-              </svg>
-            </a>
-            <a className="px-4 text-center border-r-2">
-              <img src={twitter} alt="twitter" width={17} />
-            </a>
-            <a className="px-4 text-center border-r-2">
-              <svg
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                className="w-5 h-5"
-                viewBox="0 0 24 24"
-              >
-                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-              </svg>
-            </a>
-            <a className="px-4 text-center">
-              <svg
-                fill="currentColor"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="0"
-                className="w-5 h-5"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke="none"
-                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
-                ></path>
-                <circle cx="4" cy="4" r="2" stroke="none"></circle>
-              </svg>
-            </a>
-          </span>
-        </div>
-        <div className="px-4">
-          <h2 className="mb-3 text-2xl font-medium tracking-widest title-font">
-            Our solution
-          </h2>
-          <nav className="grid gap-4 mb-10 list-none">
-            <li>
-              <Link className=" hover:text-[#FF553E]">BTHAWK</Link>
-            </li>
-            <li>
-              <Link className=" hover:text-[#FF553E]">BTRESTRO</Link>
-            </li>
-            <li>
-              <Link className=" hover:text-[#FF553E]">BTEDGE</Link>
-            </li>
-            <li>
-              <Link className=" hover:text-[#FF553E]">BTPRIME</Link>
-            </li>
-            <li>
-              <Link className=" hover:text-[#FF553E]">BTPOINT</Link>
-            </li>
-          </nav>
-        </div>
-        <div className="px-4">
-          <h2 className="mb-3 text-2xl font-medium tracking-widest title-font">
-            Quick link
-          </h2>
-          <nav className="grid gap-4 mb-10 list-none">
-            <li>
-              <Link to="/about" className=" hover:text-[#FF553E]">About</Link>
-            </li>
-            <li>
-              <Link className=" hover:text-[#FF553E]">Privacy policy</Link>
-            </li>
-            <li>
-              <Link className=" hover:text-[#FF553E]">FAQ</Link>
-            </li>
-            <li>
-              <Link className=" hover:text-[#FF553E]">Terms & Cond.</Link>
-            </li>
-            <li>
-              <Link className=" hover:text-[#FF553E]">Career</Link>
-            </li>
-            <li>
-              <Link to="/contact" className=" hover:text-[#FF553E]">Contact us</Link>
-            </li>
-          </nav>
-        </div>
-        <div className="col-span-2 px-4 md:col-span-1">
-          <h2 className="mb-3 text-xl tracking-widest title-font">
-            Download App Now
-          </h2>
-          
-          <h2 className="mb-3 text-xl tracking-widest title-font">
-            News Letter
-          </h2>
-          <div className="relative">
-            <input
-              type="email"
-              id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="block w-full px-3 py-2 mt-1 text-black border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-              placeholder="Enter your email"
-              required
-            />
-            <button
-              type="submit"
-              className="submit-btn w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-[#FF553E] "
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                <path
-                  fill="#ffffff"
-                  d="M352 96l64 0c17.7 0 32 14.3 32 32l0 256c0 17.7-14.3 32-32 32l-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32l64 0c53 0 96-43 96-96l0-256c0-53-43-96-96-96l-64 0c-17.7 0-32 14.3-32 32s14.3 32 32 32zm-9.4 182.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L242.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l210.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
-                />
-              </svg>
-            </button>
+    <>
+
+
+      <footer className="text-white body-font bg-[#01112D] relative lg:mt-36 md:mt-52 mt-44 lg:pt-20 md:pt-16">
+        <div className="container bg-[#FF83D5] text-white grid lg:grid-cols-2 grid-cols-1 lg:p-10 p-5 rounded-2xl newsletter">
+          <div className='lg:p-10 md:p-5 p-0'>
+            <h1 className=' md:text-5xl text-3xl md:leading-tight'>Get started today for
+            better future finance!</h1>
+          </div>
+          <div className='relative lg:p-10 md:p-5 p-0'>
+            <p className='text-md leading-7'>Fiance Move is a compass for business leaders,
+              scale with checking and saving accounts, custom
+              tools, and access to our investor box.</p>
+            <form className='flex lg:mt-4 mt-3'>
+              <input className='email-input' type="email" placeholder="Enter your email" required />
+              <button className="secontary-btn lg:ml-4 ml-1" type="submit">Get Started</button> 
+            </form>
           </div>
         </div>
-      </div>
-      <div className="bg-black">
-        <div className="flex flex-col flex-wrap w-11/12 px-5 mx-auto text-center border-t-2 py-7 sm:flex-row">
-          <p className="mx-auto text-center text-md">
-            © 2019-2024 BTHAWK Developed with by ZUCOL
-          </p>
+        <div className="container px-5 py-24 grid lg:grid-cols-2 grid-cols-1">
+          <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+            <Link to="./" className="flex title-font font-medium items-center md:justify-start justify-center">
+              <img src={flogo} alt="" className='w-11/12' />
+            </Link>
+            
+          </div>
+          <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
+            <div className="lg:w-1/3 w-1/2 px-4">
+              <h2 className="title-font font-medium text-white text-xl mb-3">Company</h2>
+              <nav className="list-none mb-10">
+                <li>
+                  <Link to="./" className="text-gray-100 hover:text-gray-400">Home</Link>
+                </li>
+                <li>
+                  <Link to="./" className="text-gray-100 hover:text-gray-400">Pricing</Link>
+                </li>
+                <li>
+                  <Link to="./" className="text-gray-100 hover:text-gray-400">About</Link>
+                </li>
+                <li>
+                  <Link to="./" className="text-gray-100 hover:text-gray-400">Blog</Link>
+                </li>
+                <li>
+                  <Link to="./" className="text-gray-100 hover:text-gray-400">Conatct</Link>
+                </li>
+                <li>
+                  <Link to="./" className="text-gray-100 hover:text-gray-400">Login</Link>
+                </li>
+              </nav>
+            </div>
+            <div className="lg:w-1/3 w-1/2 px-4">
+              <h2 className="title-font font-medium text-white text-xl mb-3">Help</h2>
+              <nav className="list-none mb-10">
+                <li>
+                  <Link to="./" className="text-gray-100 hover:text-gray-400">Contact us</Link>
+                </li>
+                <li>
+                  <Link to="./" className="text-gray-100 hover:text-gray-400">Our Policies</Link>
+                </li>
+                <li>
+                  <Link to="./" className="text-gray-100 hover:text-gray-400">Account</Link>
+                </li>
+                <li>
+                  <Link to="./" className="text-gray-100 hover:text-gray-400">Terms & Condition</Link>
+                </li>
+              </nav>
+            </div>
+            <div className="lg:w-1/3 w-1/2 px-4">
+              <h2 className="title-font font-medium text-white text-xl mb-3">Social</h2>
+              <nav className="list-none mb-10">
+                <li>
+                  <Link to="./" className="text-gray-100 hover:text-gray-400">Facebook</Link>
+                </li>
+                <li>
+                  <Link to="./" className="text-gray-100 hover:text-gray-400">Instagram</Link>
+                </li>
+                <li>
+                  <Link to="./" className="text-gray-100 hover:text-gray-400">Twitter</Link>
+                </li>
+                <li>
+                  <Link to="./" className="text-gray-100 hover:text-gray-400">LinkedIn</Link>
+                </li>
+              </nav>
+            </div>
+          </div>
         </div>
-      </div>
-    </footer>
+        <div className="">
+          <div className="container mx-auto pt-8 px-5 flex flex-wrap flex-col sm:flex-row border-t-2 border-white">
+            <p className="text-gray-100 text-sm text-center sm:text-left">
+              © 2023 Fiance Move All rights reserved  
+            </p>
+            <span className="inline-flex mx-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+              <nav className="list-none flex flex-wrap justify-center gap-3 mb-10">
+                <li className=''>
+
+                  <Link to="./" className="border-r-2 border-r-white pr-3 text-gray-100 hover:text-gray-400">Terms & conditions</Link>
+                </li>
+                <li className=''>
+
+                  <Link to="./" className="border-r-2 border-r-white pr-3 text-gray-100 hover:text-gray-400">Sitemap</Link>
+                </li>
+                <li className=''>
+
+                  <Link to="./" className="border-r-2 border-r-white pr-3 text-gray-100 hover:text-gray-400">Privacy Policy</Link>
+                </li>
+                <li className=''> 
+                  <Link to="./" className=" text-gray-100 hover:text-gray-400">Cookies Policy</Link>
+                </li>
+              </nav>
+            </span>
+          </div>
+        </div>
+      </footer>
+    </>
   );
 }

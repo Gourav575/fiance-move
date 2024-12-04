@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import star from '../assets/images/star.svg'
 import chart from '../assets/images/chart.svg'
 import star1 from '../assets/images/star-1.svg'
 import shape1 from '../assets/images/shape-1.svg'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 export default function Mainbanner() {
+  useEffect(() => {
+     Aos.init();
+     }, []);
 
   return (
     <>

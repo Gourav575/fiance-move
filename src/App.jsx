@@ -29,8 +29,9 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/*" />
-        <Footer />
+       
       </Switch>
+      <Footer />
       </BrowserRouter>
     </>
   )
