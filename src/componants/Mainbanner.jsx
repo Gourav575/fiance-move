@@ -14,7 +14,7 @@ export default function Mainbanner() {
   return (
     <>
       <div className="container grid lg:grid-cols-2 grid-cols-1 lg:pb-16 pb-0 lg:mt-14 mt-7">
-        <div>
+        <div data-aos="fade-up">
           <h1 className=' md:text-6xl text-4xl  md:mb-6 mb-4 md:leading-tight'>Grow Your Business with Our Plateform</h1>
           <p className='text-md leading-7'>"Our finance department has experienced significant growth through strategic
             planning and responsible management. Resulting in increased revenue, profitability,
@@ -25,7 +25,7 @@ export default function Mainbanner() {
             <button className="primary-btn lg:ml-4 ml-1" type="submit">Get Started</button> </form>
 
         </div>
-        <div className='relative mt-5'>
+        <div data-aos="fade-up" className='relative mt-5'>
           <div className=''>
             <img src={chart} className='chart-img ml-auto' alt="" />
           </div>
@@ -47,7 +47,7 @@ export default function Mainbanner() {
         </div>
 
       </div>
-      <div className='bg-[#655CFE] w-full mt-10'>
+      <div data-aos="fade-up" className='bg-[#655CFE] w-full mt-10'>
         <div className="container text-white grid lg:grid-cols-2 grid-cols-1 py-7">
           <div>
             <p className='lg:text-2xl text-xl '>Various kinds of feature varience that can

@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const FAQ = [
   {
@@ -54,11 +56,13 @@ const FAQComponent = ({
 
 export default function Faq() {
   const [openQuestionIndex, setOpenQuestionIndex] = useState(null);
-
+  useEffect(() => {
+    Aos.init();
+    }, []);
   return (
     <>
       <div className="container grid lg:grid-cols-2 grid-cols-1 pb-16">
-        <div>
+        <div data-aos="fade-up">
           <h2 className='lg:text-5xl text-3xl mb-6 leading-tight lg:w-11/12  w-full'>Frequently asked Questions</h2>
           <p className='text-md leading-7 w-11/12'>
             Nunc scelerisque tincidunt elit. Vestibulum non mi ipsum. Cras pretium suscipit
@@ -68,7 +72,7 @@ export default function Faq() {
             <button className="primary-btn">Try for free</button>
           </div>
         </div>
-        <div className='lg:mt-0 mt-10'>
+        <div data-aos="fade-up" className='lg:mt-0 mt-10'>
           <FAQComponent
             questions={FAQ}
             openQuestionIndex={openQuestionIndex}

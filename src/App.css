@@ -59,17 +59,28 @@ h1,h2,h3,h4,h5,h6{
 img{
   width: 100%;
 }
+a:hover{
+  opacity: .8;
+}
 .primary-btn{
   background-color: var(--primary-color1);
   color: var(--white-color);
   padding: 15px 30px;
   border-radius: 100px;
 }
+.primary-btn:hover{
+  background-color: var(--black-color);
+  transition: 1s;
+}
 .secontary-btn{
   background-color: var(--black-color);
   color: var(--white-color);
   padding: 15px 30px;
   border-radius: 100px;
+}
+.secontary-btn:hover{
+  background-color: var(--primary-color1);
+  transition: 1s;
 }
 /* Header */
 
@@ -211,14 +222,11 @@ img{
 .email-input{
   background-color: #F5F5F5;
   padding: 15px 30px;
-  color: #e38f8f;
+  color: #000;
   border-radius: 100px;
   font-size: 16px;
 }
-.email-input:focus{
-  /* outline: #655CFE;
-  border: 1px solid #655CFE; */
-}
+
 .chart-img{
   width: 430px;
 }
@@ -328,6 +336,12 @@ left: -1px;
   .newsletter{
 top: -10%;
   }
+}
+@media(max-width:370px){
+  .primary-btn,.secontary-btn{
+  padding: 7px 9px;
+}
+
 }
 
 /*end Home page */

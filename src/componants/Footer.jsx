@@ -1,15 +1,20 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import flogo from '../assets/images/footer-logo.svg'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
-
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 export default function Footer() {
+  useEffect(() => {
+    Aos.init();
+    }, []);
   return (
+   
     <>
 
 
-      <footer className="text-white body-font bg-[#01112D] relative lg:mt-36 md:mt-52 mt-44 lg:pt-20 md:pt-16">
-        <div className="container bg-[#FF83D5] text-white grid lg:grid-cols-2 grid-cols-1 lg:p-10 p-5 rounded-2xl newsletter">
+      <footer data-aos="fade-up" className="text-white body-font bg-[#01112D] relative lg:mt-36 md:mt-52 mt-44 lg:pt-20 md:pt-16">
+        <div  className="container bg-[#FF83D5] text-white grid lg:grid-cols-2 grid-cols-1 lg:p-10 p-5 rounded-2xl newsletter">
           <div className='lg:p-10 md:p-5 p-0'>
             <h1 className=' md:text-5xl text-3xl md:leading-tight'>Get started today for
             better future finance!</h1>
