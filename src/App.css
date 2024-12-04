@@ -173,13 +173,12 @@ a:hover{
     top: 80px;
     background-color: #efeeff;
     width: 0px;
-    height: calc(100vh - 80px);
     transition: all 0.3s ease-in;
     overflow: hidden;
   }
 
   .nav-elements.active {
-    width: 270px;
+    width: 100%;
   }
 
   .nav-elements ul {
@@ -323,6 +322,9 @@ left: -1px;
   -moz-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+}
+.footer-link li{
+  margin-bottom: 15px;
 }
 @media(max-width:991px){
   .reward-card {

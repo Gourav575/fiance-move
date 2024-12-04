@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink,Link } from "react-router-dom";
 import logo from '../assets/images/logo.svg'
 // import Hamburger from "./Hamburger";
 // import Logo from "./Logo";
@@ -16,7 +16,7 @@ const Navbar = () => {
       <div className="container main-header">
         <div className="logo">
          
-         <img src={logo} alt="logo" className="w-11/12" />
+        <Link to="./"> <img src={logo} alt="logo" className="w-11/12" /></Link>
         </div>
         <div className="menu-icon" onClick={handleShowNavbar}>
           <svg xmlns="http://www.w3.org/2000/svg" width="42" height="24" viewBox="0 0 52 24">

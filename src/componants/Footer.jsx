@@ -39,7 +39,7 @@ export default function Footer() {
           <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
             <div className="lg:w-1/3 w-1/2 px-4">
               <h2 className="title-font font-medium text-white text-xl mb-3">Company</h2>
-              <nav className="list-none mb-10">
+              <nav className="list-none footer-link mb-10">
                 <li>
                   <Link to="./" className="text-gray-100 hover:text-gray-400">Home</Link>
                 </li>
@@ -62,7 +62,7 @@ export default function Footer() {
             </div>
             <div className="lg:w-1/3 w-1/2 px-4">
               <h2 className="title-font font-medium text-white text-xl mb-3">Help</h2>
-              <nav className="list-none mb-10">
+              <nav className="list-none footer-link mb-10">
                 <li>
                   <Link to="./" className="text-gray-100 hover:text-gray-400">Contact us</Link>
                 </li>
@@ -79,7 +79,7 @@ export default function Footer() {
             </div>
             <div className="lg:w-1/3 w-1/2 px-4">
               <h2 className="title-font font-medium text-white text-xl mb-3">Social</h2>
-              <nav className="list-none mb-10">
+              <nav className="list-none footer-link mb-10">
                 <li>
                   <Link to="./" className="text-gray-100 hover:text-gray-400">Facebook</Link>
                 </li>
