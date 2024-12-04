@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import star from '../assets/images/star.svg'
 import chart from '../assets/images/chart.svg'
 import star1 from '../assets/images/star-1.svg'
@@ -7,10 +7,16 @@ import Aos from 'aos'
 import 'aos/dist/aos.css'
 
 export default function Mainbanner() {
+
+  const [hero, setHero] = useState('');
+
   useEffect(() => {
      Aos.init();
      }, []);
 
+     const heroHandleSubmit = (e)=>{
+      e.preventDefault();
+     }
   return (
     <>
       <div className="container grid lg:grid-cols-2 grid-cols-1 lg:pb-16 pb-0 lg:mt-14 mt-7">
@@ -20,9 +26,10 @@ export default function Mainbanner() {
             planning and responsible management. Resulting in increased revenue, profitability,
             and financial stability. We're committed to continued growth and success."</p>
 
-          <form className='flex lg:mt-6 mt-3'>
-            <input className='email-input' type="email" placeholder="Enter your email" required />
-            <button className="primary-btn lg:ml-4 ml-1" type="submit">Get Started</button> </form>
+          <form onSubmit={heroHandleSubmit} className='flex lg:mt-6 mt-3'>
+            <input className='email-input' type="email" value={hero} onChange={(e) => setHero(e.target.value)} placeholder="Enter your email" required />
+            <button className="primary-btn lg:ml-4 ml-1" type="submit">Get Started</button>
+             </form>
 
         </div>
         <div data-aos="fade-up" className='relative mt-5'>

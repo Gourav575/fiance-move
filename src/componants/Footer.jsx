@@ -1,13 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import flogo from '../assets/images/footer-logo.svg'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
 export default function Footer() {
+  const [footer1, setfooter] = useState('');
+
   useEffect(() => {
     Aos.init();
     }, []);
+    const heroHandleSubmit1 = (e)=>{
+      e.preventDefault();
+     }
   return (
    
     <>
@@ -23,8 +28,8 @@ export default function Footer() {
             <p className='text-md leading-7'>Fiance Move is a compass for business leaders,
               scale with checking and saving accounts, custom
               tools, and access to our investor box.</p>
-            <form className='flex lg:mt-4 mt-3'>
-              <input className='email-input' type="email" placeholder="Enter your email" required />
+            <form onSubmit={heroHandleSubmit1} className='flex lg:mt-4 mt-3'>
+              <input className='email-input' type="email"  value={footer1} onChange={(e) => setfooter(e.target.value)} placeholder="Enter your email" required />
               <button className="secontary-btn lg:ml-4 ml-1" type="submit">Get Started</button> 
             </form>
           </div>
