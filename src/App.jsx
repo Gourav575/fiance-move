@@ -4,8 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
-import { BrowserRouter,Routes, Route} from "react-router-dom";
-// import Navbar from "./components/Navbar";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './componants/Header';
 import Home from './pages/Home';
 import Footer from './componants/Footer'; 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import flogo from '../assets/images/footer-logo.svg'
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import { Link } from 'react-router-dom';
 import Aos from 'aos'
 import 'aos/dist/aos.css'
 
